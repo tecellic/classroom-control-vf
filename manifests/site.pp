@@ -48,6 +48,7 @@ node default {
   owner   => 'root',
   group   => 'root',
   mode    => '0644',
-  content => "Hey, tecelli is fun!\n",
+  content => "Hey, ${::hostname} - > ${::osfamily} is fun!\n",
+  
 }
 }
