@@ -50,7 +50,5 @@ node default {
   mode    => '0644',
   content => "Hey, ${::hostname} - > ${::osfamily} is fun!\n",
   }
-  exec { 'cowsay': 
-  command   => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd", }
-  
+  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd", }
   }
