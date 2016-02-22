@@ -49,7 +49,8 @@ node default {
   group   => 'root',
   mode    => '0644',
   content => "Hey, ${::hostname} - > ${::osfamily} is fun!\n",
-  exec    => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+  }
+  exec { 'cowsay': 
+  command   => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd", }
   
-}
-}
+  }
