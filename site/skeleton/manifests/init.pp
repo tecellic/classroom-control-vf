@@ -11,4 +11,12 @@ class skeleton{
  owner   => 'root',  
  source => 'puppet:///modules/skeleton/bashrc',
  }  
+ 
+  file { '/etc/skel/.bash_profile':    
+ ensure  => 'file',    
+ group   => 'root',
+ mode    => '0644',
+ owner   => 'root',  
+ source => 'puppet:///modules/skeleton/bash_profile',
+ }  
 }  
