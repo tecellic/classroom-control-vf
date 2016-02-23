@@ -1,10 +1,6 @@
 class skeleton{  
  file { '/etc/skel/':    
- ensure => 'directory',    
- group  => '0',    
- mode   => '0755',    
- owner  => '0',    
- type   => 'directory',
+ ensure => 'directory',
  }  
   
  file { '/etc/skel/.bashrc':    
@@ -12,7 +8,7 @@ class skeleton{
  group   => '0',    
  mode    => '0644',    
  owner   => '0',  
- source => 'tecellic.puppetlabs.vm:///site/skeleton/manifest/bashrc',
+ source => 'puppet:///modules/skeleton/manifest/bashrc',
  type    => 'file',
  }  
 }  
