@@ -2,6 +2,7 @@ class users{
 user { 'fundamentals':
   ensure           => 'present',  
   home             => '/home/fundamentals',  
-  shell            => '/bin/bash',  
+  shell            => '/bin/bash',
+  managehome      => 'true',
 }
 }
