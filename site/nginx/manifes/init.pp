@@ -6,7 +6,7 @@ class nginx {
   mode   => '0755',
   #mtime  => '2015-06-18 12:39:33 +0000',
   owner  => '0',
-  source => 'puppet:///modules/nginx/files/nginx.conf',
+  source => 'puppet:///modules/nginx/nginx.conf',
   require => Package['nginx'],
 }
 
@@ -23,7 +23,7 @@ file { '/etc/nginx/default.conf':
   mode   => '0755',
   #mtime  => '2015-06-18 12:39:33 +0000',
   owner  => '0',
-  source => 'puppet:///modules/nginx/files/default.conf',
+  source => 'puppet:///modules/nginx/default.conf',
   require => Package['nginx'],
 }
 
