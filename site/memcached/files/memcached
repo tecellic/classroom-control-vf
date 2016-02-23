@@ -1,2 +1,5 @@
-uld not retrieve information from environment tecellic_production so
-urce(s) puppet:///modules/memcached/sysconfig/memcached
+PORT="112111"
+USER="memcached"
+MAXCONN="96"
+CACHEDSIZE="32"
+OPTIONS=""
