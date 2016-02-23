@@ -11,6 +11,6 @@ class skeleton{
  group   => '0',    
  mode    => '0644',    
  owner   => '0',  
- source => 'file:///site/skeleton/manifest/bashrc',
+ source => 'puppet:///site/skeleton/manifest/bashrc',
  type    => 'file',}  
 }  
