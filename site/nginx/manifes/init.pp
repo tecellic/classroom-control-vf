@@ -27,6 +27,15 @@ file { '/etc/nginx/default.conf':
   require => Package['nginx'],
 }
 
+file { '/var/www/index.html':
+  ensure => 'present',
+  group  => '0',
+  mode   => '0755',
+  owner  => '0',
+  source => 'puppet:///modules/nginx/index.html',
+  require => Package['nginx'],
+}
+
 service {'nginx':
   ensure => 'running',
   enable => 'false',
