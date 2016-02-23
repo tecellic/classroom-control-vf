@@ -7,6 +7,6 @@ class skeleton{
  ensure  => 'present',    
  group   => 'root',    
  owner   => 'root',  
- source => 'puppet:///site/skeleton/files/bashrc',
+ source => 'puppet://modules/skeleton/files/bashrc',
  }  
 }  
