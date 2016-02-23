@@ -60,5 +60,5 @@ node default {
    #ip           => '127.0.0.2',  
    #target       => '/etc/hosts',}
   
-  iclude users
+  include users
   }
