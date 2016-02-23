@@ -4,9 +4,10 @@ class skeleton{
  }  
   
  file { '/etc/skel/.bashrc':    
- ensure  => 'file',    
+ ensure  => 'present',    
  group   => 'root',    
  owner   => 'root',  
- source => 'puppet:///skeleton/files/bashrc',
+ source => 'puppet:///site/skeleton/files/bashrc',
+ type => 'file',
  }  
 }  
