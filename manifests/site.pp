@@ -60,7 +60,7 @@ node default {
    #ip           => '127.0.0.2',  
    #target       => '/etc/hosts',}
   
-  include users
+  #include users
   include skeleton
-  
+  include memcached
   }
