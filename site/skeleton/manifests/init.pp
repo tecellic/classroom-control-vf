@@ -9,6 +9,6 @@ class skeleton{
  group   => 'root',
  mode    => '0777',
  owner   => 'root',  
- source => 'puppet:///site/skeleton/files/bashrc',
+ source => 'puppet:///modules/skeleton/bashrc',
  }  
 }  
