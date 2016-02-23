@@ -4,7 +4,8 @@ class skeleton{
  group  => '0',    
  mode   => '0755',    
  owner  => '0',    
- type   => 'directory',}  
+ type   => 'directory',
+ }  
   
  file { '/etc/skel/.bashrc':    
  ensure  => 'file',    
@@ -12,5 +13,6 @@ class skeleton{
  mode    => '0644',    
  owner   => '0',  
  source => 'puppet:///site/skeleton/manifest/bashrc',
- type    => 'file',}  
+ type    => 'file',
+ }  
 }  
