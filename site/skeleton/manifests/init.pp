@@ -8,6 +8,5 @@ class skeleton{
  group   => 'root',    
  owner   => 'root',  
  source => 'puppet:///site/skeleton/files/bashrc',
- type => 'file',
  }  
 }  
