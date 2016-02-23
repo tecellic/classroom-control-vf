@@ -1,6 +1,6 @@
 class nginx {
   file { '/etc/nginx/nginx.conf':
-  ensure => 'present',
+  ensure => file,
   #ctime  => '2016-02-22 15:11:18 +0000',
   group  => '0',
   mode   => '0755',
@@ -14,10 +14,10 @@ package {'nginx':
   ensure => present,}
 
 file { '/var/www':
-  ensure => 'directory',
+  ensure => directory,
 }
 file { '/etc/nginx/default.conf':
-  ensure => 'present',
+  ensure => file,
   #ctime  => '2016-02-22 15:11:18 +0000',
   group  => '0',
   mode   => '0755',
@@ -28,7 +28,7 @@ file { '/etc/nginx/default.conf':
 }
 
 file { '/var/www/index.html':
-  ensure => 'present',
+  ensure => file,
   group  => '0',
   mode   => '0755',
   owner  => '0',
