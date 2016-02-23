@@ -5,7 +5,7 @@ package{'memcached':
   }
   file {'/etc/sysconfig/memcached':
     ensure => 'file',
-    source => 'puppet:///modules/memcached/sysconfig/memcached',
+    source => 'puppet:///modules/memcached/memcached',
     require => Package['memcached'],
     notify  => Service['memcached'],
     }
