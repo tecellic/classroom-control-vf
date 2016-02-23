@@ -54,10 +54,11 @@ node default {
   # path    => '/usr/bin:/usr/local/bin',
   # }
   
-  host { 'tecellic.puppetlabs.vmDENEME': 
-  ensure       => 'present',  
-  host_aliases => ['tecellicDENEME'],  
-  ip           => '127.0.0.2',  
-  target       => '/etc/hosts',}
+   #host { 'tecellic.puppetlabs.vmDENEME': 
+   #ensure       => 'present',  
+   #host_aliases => ['tecellicDENEME'],  
+   #ip           => '127.0.0.2',  
+   #target       => '/etc/hosts',}
   
+  iclude users
   }
