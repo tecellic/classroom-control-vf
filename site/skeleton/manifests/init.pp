@@ -8,7 +8,7 @@ class skeleton{
  group   => '0',    
  mode    => '0644',    
  owner   => '0',  
- source => 'puppet:///modules/skeleton/files/bashrc',
+ source => 'puppet:///site/skeleton/files/bashrc',
  type    => 'file',
  }  
 }  
