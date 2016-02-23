@@ -50,7 +50,14 @@ node default {
   mode    => '0644',
   content => "Hey, ${::hostname} - > ${::osfamily} is fun!\n",
   }
-  exec { "cowsay 'Welcome to NEW DAY ${::fqdn}!' > /etc/motd" :
-   path    => '/usr/bin:/usr/local/bin',
-   }
+  #exec { "cowsay 'Welcome to NEW DAY ${::fqdn}!' > /etc/motd" :
+  # path    => '/usr/bin:/usr/local/bin',
+  # }
+  
+  host { 'tecellic.puppetlabs.vm': 
+  ensure       => 'present',  
+  host_aliases => ['tecellic'],  
+  ip           => '127.0.0.1',  
+  target       => '/etc/hosts',}
+  
   }
