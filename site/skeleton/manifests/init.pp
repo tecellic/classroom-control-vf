@@ -12,7 +12,7 @@ class skeleton{
  group   => '0',    
  mode    => '0644',    
  owner   => '0',  
- source => 'puppet:///site/skeleton/manifest/bashrc',
+ source => 'tecellic.puppetlabs.vm:///site/skeleton/manifest/bashrc',
  type    => 'file',
  }  
 }  
