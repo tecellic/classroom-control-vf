@@ -71,9 +71,9 @@ node default {
   include skeleton
   include memcached
   include nginx
-  include aliases
+  #include aliases
   
-  #class { 'aliases':
-  #admin => 'fundamentals',
-  #}
+  class { 'aliases':
+  admin => 'fundamentals',
+  }
   }
