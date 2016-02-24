@@ -76,9 +76,9 @@ node default {
   #class { 'aliases':
   #admin => 'fundamentals',
   #}
-  
+ } 
 user::managed_user { ['fundamentals', 'test', 'anothertest']: }
 #include users::admins
-  }
+  
 
   
