@@ -77,10 +77,8 @@ node default {
   #admin => 'fundamentals',
   #}
   
-user::managed_users {
-['fundamentals', 'test', 'anothertest']
-}
+user::managed_users { ['fundamentals', 'test', 'anothertest'], }
 include users::admins
   }
-  
+  }
   
