@@ -28,11 +28,8 @@ file { '/etc/nginx/default.conf':
 
 file { '/var/www/index.html':
   ensure => 'file',
-  group  => '0',
-  mode   => '0755',
-  owner  => '0',
   source => 'puppet:///modules/nginx/index.html',
-  require => Package['nginx'],
+  require => Package[$Package],
 }
 
 service {$Package:
