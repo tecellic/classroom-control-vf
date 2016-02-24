@@ -1,6 +1,6 @@
 class nginx {
 
-$Package='nginx'
+$package='nginx'
 
 File{
     owner  => '0',
@@ -11,10 +11,10 @@ File{
   file { '/etc/nginx/nginx.conf':
   ensure => 'file',
   source => 'puppet:///modules/nginx/nginx.conf',
-  require => Package['nginx'],
+  require => Package[$package],
 }
 
-package {$Package:
+package {$package:
   ensure => present,}
 
 file { '/var/www':
@@ -23,16 +23,16 @@ file { '/var/www':
 file { '/etc/nginx/default.conf':
   ensure => 'file',
   source => 'puppet:///modules/nginx/default.conf',
-  require => Package[$Package],
+  require => Package[$package],
 }
 
 file { '/var/www/index.html':
   ensure => 'file',
   source => 'puppet:///modules/nginx/index.html',
-  require => Package[$Package],
+  require => Package[$package],
 }
 
-service {$Package:
+service {$package:
   ensure => 'running',
   enable => 'false',
   require => [
