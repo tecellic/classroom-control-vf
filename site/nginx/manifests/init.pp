@@ -1,16 +1,20 @@
 class nginx {
+
+$Package='nginx'
+
+File{
+    owner  => '0',
+    mode   => '0644',
+    group  => '0',
+    }
+
   file { '/etc/nginx/nginx.conf':
   ensure => 'file',
-  #ctime  => '2016-02-22 15:11:18 +0000',
-  group  => '0',
-  mode   => '0755',
-  #mtime  => '2015-06-18 12:39:33 +0000',
-  owner  => '0',
   source => 'puppet:///modules/nginx/nginx.conf',
   require => Package['nginx'],
 }
 
-package {'nginx':
+package {$Package:
   ensure => present,}
 
 file { '/var/www':
@@ -18,13 +22,8 @@ file { '/var/www':
 }
 file { '/etc/nginx/default.conf':
   ensure => 'file',
-  #ctime  => '2016-02-22 15:11:18 +0000',
-  group  => '0',
-  mode   => '0755',
-  #mtime  => '2015-06-18 12:39:33 +0000',
-  owner  => '0',
   source => 'puppet:///modules/nginx/default.conf',
-  require => Package['nginx'],
+  require => Package[$Package],
 }
 
 file { '/var/www/index.html':
@@ -36,7 +35,7 @@ file { '/var/www/index.html':
   require => Package['nginx'],
 }
 
-service {'nginx':
+service {$Package:
   ensure => 'running',
   enable => 'false',
   require => [
