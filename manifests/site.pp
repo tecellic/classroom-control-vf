@@ -80,5 +80,5 @@ node default {
 user::managed_users { ['fundamentals', 'test', 'anothertest'] }
 #include users::admins
   }
-  }
+
   
