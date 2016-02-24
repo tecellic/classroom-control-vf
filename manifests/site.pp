@@ -73,7 +73,14 @@ node default {
   include nginx
   #include aliases
   
-  class { 'aliases':
-  admin => 'fundamentals',
+  #class { 'aliases':
+  #admin => 'fundamentals',
+  #}
+  
+user::managed_users {
+['fundamentals', 'test', 'anothertest']
+}
+
   }
-  }
+  
+  
