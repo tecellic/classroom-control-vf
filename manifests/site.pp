@@ -45,7 +45,8 @@ node default {
   
   $message = hiera('message')
   notify {$message:}
-  
+    $message2 = hiera('message2')
+  notify {$message2:}
   
   $cvirtual=capitalize($::virtual)
   notify { "Hello, my name is ${::hostname} and I am a Virtual ${::virtual} and release v13.2": }
