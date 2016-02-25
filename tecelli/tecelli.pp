@@ -10,18 +10,18 @@ class tecelli (
     group => root,
     mode  => '0440',
   }
-  include ssh::hostkeys  # set up keys for trusted hosts
+  #include ssh::hostkeys  # set up keys for trusted hosts
 
   if $server {
-    include ssh::server  # manage server
-    file { '/etc/ssh/sshd_config':
+    include tecelli::server  # manage server
+    file { '/tmp/sshd_config':
       ensure  => file,
       content => template('ssh/sshd_config.erb'),
     }
   }
   if $client {
-    include ssh::client  # manage client
-    file { '/etc/ssh/ssh_config':
+    include tecelli::client  # manage client
+    file { '/tmp/ssh_config':
       ensure  => file,
       content => template('ssh/ssh_config.erb'),
     }
