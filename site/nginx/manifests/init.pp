@@ -44,8 +44,8 @@ service {$package:
               }
   
 }
-class nginx::deneme{
+class nginx::deneme($test_param,){
 class{'nginx':
-test => tecelli,
+test => $test_param,
 }
 }
