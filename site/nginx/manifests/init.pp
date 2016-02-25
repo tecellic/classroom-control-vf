@@ -1,5 +1,5 @@
 class nginx (
-$test = asd
+$test = 'asd',
 ){
 notify { "$test" :}
 $package='nginx'
