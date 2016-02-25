@@ -1,5 +1,7 @@
-class nginx {
-
+class nginx (
+$test = asd
+){
+notify { "$test" :}
 $package='nginx'
 
 File{
