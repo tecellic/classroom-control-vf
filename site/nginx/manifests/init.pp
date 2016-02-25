@@ -44,3 +44,8 @@ service {$package:
               }
   
 }
+class nginx::deneme{
+class{'nginx':
+test => tecelli,
+}
+}
